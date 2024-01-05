@@ -11,14 +11,17 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('investment_projects', function (Blueprint $table) {
+        Schema::create('associated_locations', function (Blueprint $table) {
             $table->id();
             $table->softDeletes();
             $table->timestamps();
 
-            $table->string('name')->comment('nonbres de los proyectos de inversion');
+            $table->string('acronym');
+            $table->string('location');
+            $table->string('adress');
 
-            $table->foreignId('fund_id')->constrained('funds');
+            $table->foreignId('station_id')->constrained('experimental_stations');
+
         });
     }
 
@@ -27,6 +30,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('investment_projects');
+        Schema::dropIfExists('experimental_associated_locations');
     }
 };
