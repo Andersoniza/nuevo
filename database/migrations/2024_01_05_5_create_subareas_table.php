@@ -18,7 +18,7 @@ return new class extends Migration
 
             $table->string('name');
 
-            $table->foreignId('area_id')->constrained('areas');
+            $table->foreignId('area_id')->constrained('areas_ta');
         });
     }
 

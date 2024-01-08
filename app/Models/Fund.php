@@ -17,4 +17,8 @@ class Fund extends Model
     public function funds(){
         return $this->hasMany(InvestmentProject::class);
     }
+
+    public function fundUser(){
+        return $this->hasMany(User::class);
+    }
 }

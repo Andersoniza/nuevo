@@ -5,16 +5,17 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class AcademicFormation extends Model
+class Process extends Model
 {
     use HasFactory;
 
-    protected $table = 'academic_formations';
+    protected $table = 'processes';
     protected $fillable = [
         'name'
     ];
 
-    public function academicUser(){
-        return $this->hasMany(User::class);
+    public function process(){
+        return $this->hasMany(Unit::class);
     }
+
 }

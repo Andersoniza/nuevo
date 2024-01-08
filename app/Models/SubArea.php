@@ -5,16 +5,16 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class AcademicFormation extends Model
+class SubArea extends Model
 {
     use HasFactory;
 
-    protected $table = 'academic_formations';
+    protected $table = 'subareas';
     protected $fillable = [
         'name'
     ];
 
-    public function academicUser(){
-        return $this->hasMany(User::class);
+    public function areata(){
+        return $this->belongsTo(AreaTa::class);
     }
 }

@@ -18,4 +18,8 @@ class ExperimentalStation extends Model
     {
         return $this->belongsTo(Province::class);
     }
+
+    public function associatedLocation(){
+        return $this->belongsTo(AssociatedLocation::class);
+    }
 }

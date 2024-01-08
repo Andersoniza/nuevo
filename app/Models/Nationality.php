@@ -5,20 +5,16 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class Regimen extends Model
+class Nationality extends Model
 {
     use HasFactory;
 
-    protected $table = 'regimenes';
+    protected $table = 'nationalities';
     protected $fillable = [
-        'name'
+      'name'
     ];
 
-    public function regimen(){
-        return $this->hasMany(Modality::class);
-    }
-
-    public function regimenUser(){
+    public function nationalityUser(){
         return $this->hasMany(User::class);
-}
+    }
 }

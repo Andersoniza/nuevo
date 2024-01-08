@@ -13,4 +13,8 @@ class Ethnic extends Model
     protected $fillable = [
         'name'
     ];
+
+    public function ethnicUser(){
+        return $this->hasMany(User::class);
+    }
 }

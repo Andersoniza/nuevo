@@ -11,7 +11,7 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('areas', function (Blueprint $table) {
+        Schema::create('areas_ta', function (Blueprint $table) {
             $table->id();
             $table->softDeletes();
             $table->timestamps();

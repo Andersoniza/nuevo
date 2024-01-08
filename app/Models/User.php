@@ -12,34 +12,59 @@ class User extends Authenticatable
 {
     use HasApiTokens, HasFactory, Notifiable;
 
-    /**
-     * The attributes that are mass assignable.
-     *
-     * @var array<int, string>
-     */
     protected $fillable = [
+        'dni',
         'name',
         'email',
+        'birthDate',
+        'hiteDate',
+        'contributionNumber',
+        'senescytRegistrationNumber',
+        'academicTitle',
+        'institutionalPhone',
+        'esigefActivity',
+        'salary',
         'password',
+        'returnedMigrant',
+        'gender',
+        'transportation'
     ];
 
-    /**
-     * The attributes that should be hidden for serialization.
-     *
-     * @var array<int, string>
-     */
     protected $hidden = [
         'password',
         'remember_token',
     ];
 
-    /**
-     * The attributes that should be cast.
-     *
-     * @var array<string, string>
-     */
     protected $casts = [
         'email_verified_at' => 'datetime',
         'password' => 'hashed',
     ];
+
+    public function nationalityUser(){
+        return $this->belongsTo(Nationality::class);
+    }
+
+    public function ethnicUser(){
+        return $this->belongsTo(Ethnic::class);
+    }
+
+    public function academicUser(){
+        return $this->belongsTo(AcademicFormation::class);
+    }
+
+    public function positionUser(){
+        return $this->belongsTo(Position::class);
+    }
+
+    public function fundUser(){
+        return $this->belongsTo(Fund::class);
+    }
+
+    public function regimenUser(){
+        return $this->belongsTo(Regimen::class);
+    }
+
+    public function associatedUser(){
+        return $this->belongsTo(AssociatedLocation::class);
+    }
 }
