@@ -32,10 +32,8 @@ return new class extends Migration
             ->constrained('institutions');
             $table->foreignId('component_id')
             ->constrained('components');
-            /**
-            *$table->foreignId('associated_location_id')
-            *->constrained('associated_locations');
-            */
+            $table->foreignId('associated_location_id')
+            ->constrained('associated_locations');
             $table->foreignId('subActivityPoa_id')
             ->constrained('subActivitysPoas');
         });

@@ -13,13 +13,15 @@ return new class extends Migration
     {
         Schema::create('users', function (Blueprint $table) {
             $table->id();
-            $table->bigInteger('dni')->unique();
+            $table->softDeletes();
+            $table->timestamps();
+            //$table->bigInteger('dni')->unique();
             $table->string('name');
-            $table->string('email')->unique();
+            /*$table->string('email')->unique();
             $table->timestamp('email_verified_at')->nullable();
             $table->date('birthDate');
             $table->date('hiteDate');
-            $table->integer('contributionNumber');
+            $table->bigInteger('contributionNumber');
             $table->string('senescytRegistrationNumber');
             $table->string('academicTitle');
             $table->string('institutionalPhone');
@@ -40,6 +42,7 @@ return new class extends Migration
             $table->foreignId('regimen_id')->constrained('regimenes');
             $table->foreignId('process_id')->constrained('processes');
             $table->foreignId('associated_location_id')->constrained('associated_locations');
+        */
         });
     }
 

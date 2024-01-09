@@ -15,7 +15,7 @@ return new class extends Migration
             $table->id();
             $table->timestamps();
             $table->softDeletes();
-            $table->string('amount');
+            $table->bigInteger('amount');
             $table->foreignId('typeFinancing_id')
                 ->constrained('typesFinancings');
             $table->foreignId('institution_id')

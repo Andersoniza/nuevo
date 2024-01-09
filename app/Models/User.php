@@ -13,23 +13,23 @@ class User extends Authenticatable
     use HasApiTokens, HasFactory, Notifiable;
 
     protected $fillable = [
-        'dni',
+        //'dni',
         'name',
-        'email',
-        'birthDate',
-        'hiteDate',
-        'contributionNumber',
-        'senescytRegistrationNumber',
-        'academicTitle',
-        'institutionalPhone',
-        'esigefActivity',
-        'salary',
-        'password',
-        'returnedMigrant',
-        'gender',
-        'transportation'
+        //'email',
+        //'birthDate',
+       // 'hiteDate',
+       // 'contributionNumber',
+        //'senescytRegistrationNumber',
+       // 'academicTitle',
+        //'institutionalPhone',
+       // 'esigefActivity',
+      //  'salary',
+       //'password',
+       // 'returnedMigrant',
+       // 'gender',
+       // 'transportation'
     ];
-
+/*
     protected $hidden = [
         'password',
         'remember_token',
@@ -40,6 +40,24 @@ class User extends Authenticatable
         'password' => 'hashed',
     ];
 
+    public function activityProject(){
+        return $this->hasMany(ActivityProject::class);
+    }
+    public function subActivityPoa(){
+        return $this->hasMany(SubActivityPoa::class);
+    }
+    public function project(){
+        return $this->hasMany(Project::class);
+    }
+    public function objectivePei(){
+        return $this->hasMany(ObjectivePei::class);
+    }
+    public function generalActivityPoa(){
+        return $this->hasMany(GeneralActivityPoa::class);
+    }
+    public function activityPei(){
+        return $this->hasMany(ActivityPei::class);
+    }
     public function nationalityUser(){
         return $this->belongsTo(Nationality::class);
     }
@@ -67,4 +85,5 @@ class User extends Authenticatable
     public function associatedUser(){
         return $this->belongsTo(AssociatedLocation::class);
     }
+    */
 }
