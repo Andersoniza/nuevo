@@ -53,7 +53,7 @@ class FinancingSeeder extends Seeder
             Institution::create($institution);
         }
 
-        /*$financings = [
+        $financings = [
             ['amount' => 4356 , 'typeFinancing_id' => 1 , 'institution_id' => 1],
             ['amount' => 435346 , 'typeFinancing_id' => 2 , 'institution_id' => 1],
             ['amount' => 21456 , 'typeFinancing_id' => 2 , 'institution_id' => 2],
@@ -63,6 +63,6 @@ class FinancingSeeder extends Seeder
 
         foreach ($financings as $financing) {
             Financing::create($financing);
-        }*/
+        }
     }
 }

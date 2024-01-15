@@ -13,24 +13,24 @@ class User extends Authenticatable
     use HasApiTokens, HasFactory, Notifiable;
 
     protected $fillable = [
-        //'dni',
+        'dni',
         'name',
-        //'email',
-        //'birthDate',
-       // 'hiteDate',
-       // 'contributionNumber',
-        //'senescytRegistrationNumber',
-       // 'academicTitle',
-        //'institutionalPhone',
-       // 'esigefActivity',
-      //  'salary',
-       //'password',
-       // 'returnedMigrant',
-       // 'gender',
-       // 'transportation'
+        'email',
+        'birthDate',
+        'hiteDate',
+        'contributionNumber',
+        'senescytRegistrationNumber',
+        'academicTitle',
+        'institutionalPhone',
+        'esigefActivity',
+        'salary',
+       'password',
+        'returnedMigrant',
+        'gender',
+        'transportation'
     ];
-/*
-    protected $hidden = [
+   
+   /* protected $hidden = [
         'password',
         'remember_token',
     ];
@@ -38,7 +38,7 @@ class User extends Authenticatable
     protected $casts = [
         'email_verified_at' => 'datetime',
         'password' => 'hashed',
-    ];
+    ];*/
 
     public function activityProject(){
         return $this->hasMany(ActivityProject::class);
@@ -82,8 +82,13 @@ class User extends Authenticatable
         return $this->belongsTo(Regimen::class);
     }
 
-    public function associatedUser(){
+    public function process(){
+        return $this->belongsTo(Process::class);
+    }
+
+     public function associatedUser(){
         return $this->belongsTo(AssociatedLocation::class);
     }
-    */
+    
+    
 }

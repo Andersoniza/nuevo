@@ -15,25 +15,42 @@ return new class extends Migration
             $table->id();
             $table->softDeletes();
             $table->timestamps();
-            //$table->bigInteger('dni')->unique();
+            $table->bigInteger('dni')->unique();
             $table->string('name');
-            /*$table->string('email')->unique();
-            $table->timestamp('email_verified_at')->nullable();
+            $table->string('email')->unique();
+            $table->boolean('busyGame');
+            $table->string('age');
+           // $table->timestamp('email_verified_at')->nullable();
             $table->date('birthDate');
-            $table->date('hiteDate');
-            $table->bigInteger('contributionNumber');
+            $table->date('ingressDate');
+            $table->string('timeService');
+            $table->bigInteger('impositionNumber');
             $table->string('senescytRegistrationNumber');
             $table->string('academicTitle');
             $table->string('institutionalPhone');
             $table->string('esigefActivity');
-            $table->integer('salary');
+            $table->bigInteger('salary');
             $table->string('password');
             $table->boolean('returnedMigrant');
             $table->boolean('gender');
             $table->boolean('transportation');
-            $table->rememberToken();
-            $table->timestamps();
+            $table->string('extensionPhone');
+            $table->boolean('commissionServise');
+            $table->boolean('dataCommission1');
+            $table->boolean('dataCommission2');
+            $table->boolean('dataCommission3');
+            $table->boolean('replacementCommission');
+            $table->boolean('replacementCommission');
+            $table->string('budgetItem1');
+            $table->string('budgetItem2');
 
+            //$table->rememberToken();
+
+            $table->foreignId('locationWork_id')->constrained('locationWorks');
+            $table->foreignId('laborProvince_id')->constrained('provinces');
+            $table->foreignId('laborCanton_id')->constrained('cantons');
+            $table->foreignId('fourthLevel_id')->constrained('fourthLevels');
+            $table->foreignId('specialSituation_id')->constrained('specialSituations');
             $table->foreignId('nationality_id')->constrained('nationalities');
             $table->foreignId('ethnic_id')->constrained('ethnicities');
             $table->foreignId('academicFormation_id')->constrained('academic_formations');
@@ -42,7 +59,8 @@ return new class extends Migration
             $table->foreignId('regimen_id')->constrained('regimenes');
             $table->foreignId('process_id')->constrained('processes');
             $table->foreignId('associated_location_id')->constrained('associated_locations');
-        */
+            $table->foreignId('priorityGroup_id')->constrained('priorityGroups');
+        
         });
     }
 

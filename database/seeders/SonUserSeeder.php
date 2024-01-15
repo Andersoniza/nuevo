@@ -5,6 +5,7 @@ namespace Database\Seeders;
 
 use App\Models\InvestmentProject;
 use App\Models\Position;
+use App\Models\AssociatedLocation;
 use App\Models\Unit;
 use App\Models\SubArea;
 use App\Models\Modality;
@@ -167,6 +168,26 @@ class SonUserSeeder extends Seeder
 
         foreach ($modalityTypes as $modalityType) {
             ModalityType::create($modalityType);
+        }
+
+        $associatedLocations = [
+            ['acronym' => 'Mejoramiento genético de cultivos',
+            'location' => 'Mejoramiento genético de cultivos',
+            'adress' => 'Mejoramiento genético de cultivos',
+            'station_id' => 1],
+            ['acronym' => 'Mejoramiento genético de cultivos',
+            'location' => 'Mejoramiento genético de cultivos',
+            'adress' => 'Mejoramiento genético de cultivos',
+            'station_id' => 1],
+            ['acronym' => 'Mejoramiento genético de cultivos',
+            'location' => 'Mejoramiento genético de cultivos',
+            'adress' => 'Mejoramiento genético de cultivos',
+            'station_id' => 1],
+
+        ];
+
+        foreach ($associatedLocations as $associatedLocation) {
+            AssociatedLocation::create($associatedLocation);
         }
 
         

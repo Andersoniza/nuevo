@@ -20,6 +20,6 @@ class ExperimentalStation extends Model
     }
 
     public function associatedLocation(){
-        return $this->belongsTo(AssociatedLocation::class);
+        return $this->hasMany(AssociatedLocation::class);
     }
 }
