@@ -4,13 +4,11 @@ namespace App\Models;
 
 // use Illuminate\Contracts\Auth\MustVerifyEmail;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
-use Tymon\JWTAuth\Contracts\JWTSubject;
+use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
 use Laravel\Sanctum\HasApiTokens;
-use Illuminate\Foundation\Auth\User as Authenticatable;
 
-
-class User extends Authenticatable implements JWTSubject
+class User extends Authenticatable
 {
     use HasApiTokens, HasFactory, Notifiable;
 
@@ -26,13 +24,13 @@ class User extends Authenticatable implements JWTSubject
         'institutionalPhone',
         'esigefActivity',
         'salary',
-        'password',
+       'password',
         'returnedMigrant',
         'gender',
         'transportation'
     ];
-
-    protected $hidden = [
+   
+   /* protected $hidden = [
         'password',
         'remember_token',
     ];
@@ -40,18 +38,26 @@ class User extends Authenticatable implements JWTSubject
     protected $casts = [
         'email_verified_at' => 'datetime',
         'password' => 'hashed',
-    ];
+    ];*/
 
-    public function getJWTIdentifier()
-    {
-        return $this->getKey();
+    public function activityProject(){
+        return $this->hasMany(ActivityProject::class);
     }
-
-    public function getJWTCustomClaims()
-    {
-        return [];
+    public function subActivityPoa(){
+        return $this->hasMany(SubActivityPoa::class);
     }
-
+    public function project(){
+        return $this->hasMany(Project::class);
+    }
+    public function objectivePei(){
+        return $this->hasMany(ObjectivePei::class);
+    }
+    public function generalActivityPoa(){
+        return $this->hasMany(GeneralActivityPoa::class);
+    }
+    public function activityPei(){
+        return $this->hasMany(ActivityPei::class);
+    }
     public function nationalityUser(){
         return $this->belongsTo(Nationality::class);
     }
@@ -76,7 +82,13 @@ class User extends Authenticatable implements JWTSubject
         return $this->belongsTo(Regimen::class);
     }
 
-    public function associatedUser(){
+    public function process(){
+        return $this->belongsTo(Process::class);
+    }
+
+     public function associatedUser(){
         return $this->belongsTo(AssociatedLocation::class);
     }
+    
+    
 }

@@ -5,17 +5,17 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class Province extends Model
+class ResultPei extends Model
 {
     use HasFactory;
 
-    protected $table = 'provinces';
+    protected $table = 'resultsPeis';
     protected $fillable = [
         'name'
     ];
 
-    public function experimentalStation()
+    public function activityPei()
     {
-        return $this->belongsTo(ExperimentalStation::class);
+        return $this->hasMany(ActivityPei::class);
     }
 }

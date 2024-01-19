@@ -17,7 +17,7 @@ class AssociatedLocation extends Model
     ];
 
     public function associatedLocation(){
-        return $this->hasMany(ExperimentalStation::class);
+        return $this->belongsTo(ExperimentalStation::class);
     }
 
     public function associatedUser(){

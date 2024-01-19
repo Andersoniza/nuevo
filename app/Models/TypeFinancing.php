@@ -5,17 +5,17 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class Province extends Model
+class TypeFinancing extends Model
 {
     use HasFactory;
 
-    protected $table = 'provinces';
+    protected $table = 'typesFinancings';
     protected $fillable = [
         'name'
     ];
 
-    public function experimentalStation()
+    public function financing()
     {
-        return $this->belongsTo(ExperimentalStation::class);
+        return $this->hasMany(Financing::class);
     }
 }

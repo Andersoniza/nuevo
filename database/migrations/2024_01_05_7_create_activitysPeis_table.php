@@ -15,14 +15,14 @@ return new class extends Migration
             $table->id();
             $table->timestamps();
             $table->softDeletes();
-            $table->string('name');
-    $table->foreignId('objetivoPei_id')
+            $table->string('title');
+            $table->foreignId('objectivePei_id')
                 ->constrained('objectivesPeis');
-            $table->foreignId('result_id')
+            $table->foreignId('resultPei_id')
                 ->constrained('resultsPeis');
             $table->foreignId('typePei_id')
                 ->constrained('typesPeis');
-    $table->foreignId('user_id')
+            $table->foreignId('user_id')
                 ->constrained('users');
         });
     }

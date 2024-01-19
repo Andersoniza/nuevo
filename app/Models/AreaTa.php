@@ -9,13 +9,13 @@ class AreaTa extends Model
 {
     use HasFactory;
 
-    protected $table = 'areata';
+    protected $table = 'areas_ta';
     protected $fillable = [
         'name'
     ];
 
     public function management(){
-        return $this->hasMany(Management::class);
+        return $this->belongsTo(Management::class);
     }
 
     public function areata(){

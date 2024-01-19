@@ -11,15 +11,11 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('financings', function (Blueprint $table) {
+        Schema::create('priorityGroups', function (Blueprint $table) {
             $table->id();
             $table->timestamps();
-            $table->softDeletes();
-            $table->bigInteger('amount');
-            $table->foreignId('typeFinancing_id')
-                ->constrained('typesFinancings');
-            $table->foreignId('institution_id')
-                ->constrained('institutions');
+            $table->bigInteger('dni')->unique();
+            $table->string('name');
         });
     }
 
@@ -28,6 +24,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('financings');
+        Schema::dropIfExists('priorityGroups');
     }
 };

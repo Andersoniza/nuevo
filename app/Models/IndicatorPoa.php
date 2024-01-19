@@ -5,17 +5,16 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class Province extends Model
+class IndicatorPoa extends Model
 {
     use HasFactory;
-
-    protected $table = 'provinces';
+    protected $table = 'indicatorsPoas';
     protected $fillable = [
-        'name'
+        'title'
     ];
 
-    public function experimentalStation()
+    public function generalActivityPoa()
     {
-        return $this->belongsTo(ExperimentalStation::class);
-    }
+        return $this->hasMany(GeneralActivityPoa::class);
+}
 }

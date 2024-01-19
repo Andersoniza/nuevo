@@ -24,10 +24,8 @@ return new class extends Migration
             ->constrained('activitysPeis');
             $table->foreignId('user_id')
             ->constrained('users');
-                            /**
             $table->foreignId('experimentalStation_id')
             ->constrained('experimental_stations');
-     */
         });
     }
 
