@@ -22,10 +22,10 @@ class DataUserSeeder extends Seeder
     public function run(): void
     {
         $nationalities = [
-            ['name' => 'Mejoramiento genético de cultivos'],
-            ['name' => 'Mejoramiento genético de animales'],
-            ['name' => 'Manejo integrado de plagas y enfermedades'],
-            ['name' => 'Seguridad alimentaria y nutricional']
+            ['name' => 'Ecuatoriano/a'],
+            ['name' => 'Colombiano/a'],
+            ['name' => 'Venezolano/a'],
+            ['name' => 'Peruano/a']
         ];
 
         foreach ($nationalities as $nationality) {
@@ -33,10 +33,11 @@ class DataUserSeeder extends Seeder
         }
 
         $ethnicities = [
-            ['name' => 'Mejoramiento genético de cultivos'],
-            ['name' => 'Mejoramiento genético de animales'],
-            ['name' => 'Manejo integrado de plagas y enfermedades'],
-            ['name' => 'Seguridad alimentaria y nutricional']
+            ['name' => 'AfroEcuatoriano'],
+            ['name' => 'Blanco'],
+            ['name' => 'Indigena'],
+            ['name' => 'Mestizo'],
+            ['name' => 'Montubio']
         ];
 
         foreach ($ethnicities as $ethnic) {
@@ -44,10 +45,13 @@ class DataUserSeeder extends Seeder
         }
 
         $academic_formations = [
-            ['name' => 'Mejoramiento genético de cultivos'],
-            ['name' => 'Mejoramiento genético de animales'],
-            ['name' => 'Manejo integrado de plagas y enfermedades'],
-            ['name' => 'Seguridad alimentaria y nutricional']
+            ['name' => 'Sin Instrucción'],
+            ['name' => 'Educación Basica'],
+            ['name' => 'Bachiller'],
+            ['name' => 'Egresado/a'],
+            ['name' => 'Tercer Nivel'],
+            ['name' => 'Estudiante Universitario Tercer Nivel'],
+            ['name' => 'Técnico Superior / Tecnologia'],
         ];
 
         foreach ($academic_formations as $academic_formation) {
@@ -56,10 +60,13 @@ class DataUserSeeder extends Seeder
 
 
         $position_types = [
-            ['name' => 'Mejoramiento genético de cultivos'],
-            ['name' => 'Mejoramiento genético de animales'],
-            ['name' => 'Manejo integrado de plagas y enfermedades'],
-            ['name' => 'Seguridad alimentaria y nutricional']
+            ['name' => 'Asesor'],
+            ['name' => 'Directivo'],
+            ['name' => 'Investigador'],
+            ['name' => 'Personal de Apoyo'],
+            ['name' => 'Personal de Servicio'],
+            ['name' => 'Técnico I + D'],
+            ['name' => 'Técnico I + D + i'],
         ];
 
         foreach ($position_types as $position_type) {
@@ -67,10 +74,8 @@ class DataUserSeeder extends Seeder
         }
 
         $funds = [
-            ['name' => 'Mejoramiento genético de cultivos'],
-            ['name' => 'Mejoramiento genético de animales'],
-            ['name' => 'Manejo integrado de plagas y enfermedades'],
-            ['name' => 'Seguridad alimentaria y nutricional']
+            ['name' => '51'],
+            ['name' => '71'],
         ];
 
         foreach ($funds as $fund) {
@@ -78,10 +83,8 @@ class DataUserSeeder extends Seeder
         }
 
         $regimenes = [
-            ['name' => 'Mejoramiento genético de cultivos'],
-            ['name' => 'Mejoramiento genético de animales'],
-            ['name' => 'Manejo integrado de plagas y enfermedades'],
-            ['name' => 'Seguridad alimentaria y nutricional']
+            ['name' => 'Código de trabajo'],
+            ['name' => 'Losep'],
         ];
 
         foreach ($regimenes as $regimen) {
@@ -89,10 +92,9 @@ class DataUserSeeder extends Seeder
         }
 
         $processes = [
-            ['name' => 'Mejoramiento genético de cultivos'],
-            ['name' => 'Mejoramiento genético de animales'],
-            ['name' => 'Manejo integrado de plagas y enfermedades'],
-            ['name' => 'Seguridad alimentaria y nutricional']
+            ['name' => 'Adjetivo'],
+            ['name' => 'Gobernante'],
+            ['name' => 'Sustantivo'],
         ];
 
         foreach ($processes as $process) {

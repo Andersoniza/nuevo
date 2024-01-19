@@ -17,8 +17,6 @@ return new class extends Migration
             $table->timestamps();
 
             $table->string('name');
-
-            $table->foreignId('unit_id')->constrained('units');
         });
     }
 

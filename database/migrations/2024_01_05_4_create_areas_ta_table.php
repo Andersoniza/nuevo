@@ -17,8 +17,6 @@ return new class extends Migration
             $table->timestamps();
 
             $table->string('name');
-
-            $table->foreignId('management_id')->constrained('managements');
         });
     }
 

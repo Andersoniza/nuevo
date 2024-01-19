@@ -42,7 +42,13 @@ return new class extends Migration
             $table->foreignId('regimen_id')->constrained('regimenes');
             $table->foreignId('process_id')->constrained('processes');
             $table->foreignId('associated_location_id')->constrained('associated_locations');
-        
+            $table->foreignId('modality_id')->constrained(('modalities'));
+            $table->foreignId('modality_type_id')->constrained('modality_types');
+            $table->foreignId('units_id')->constrained('units');
+            $table->foreignId('management_id')->constrained('managements');
+            $table->foreignId('areas_ta_id')->constrained('areas_ta');
+            $table->foreignId('subarea_id')->constrained('subareas');
+
         });
     }
 

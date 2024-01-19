@@ -17,8 +17,6 @@ return new class extends Migration
             $table->timestamps();
 
             $table->string('name')->comment('modalidades de contrato');
-
-            $table->foreignId('regimen_id')->constrained('regimenes');
         });
     }
 
