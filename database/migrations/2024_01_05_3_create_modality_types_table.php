@@ -17,8 +17,6 @@ return new class extends Migration
             $table->timestamps();
 
             $table->string('name')->comment('tipo de modalidades de contrato');
-
-            $table->foreignId('modality_id')->constrained('modalities');
         });
     }
 
