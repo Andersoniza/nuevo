@@ -16,9 +16,9 @@ return new class extends Migration
             $table->timestamps();
             $table->softDeletes();
             $table->string('title');
-            $table->foreignId('indicatorPei_id')
+            $table->foreignId('indicator_pei_id')
             ->constrained('indicatorsPeis');
-            $table->foreignId('typePei_id')
+            $table->foreignId('type_pei_id')
             ->constrained('typesPeis');
             $table->foreignId('departament_id')
             ->constrained('departaments');

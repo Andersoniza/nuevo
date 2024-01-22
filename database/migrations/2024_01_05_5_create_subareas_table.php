@@ -17,6 +17,8 @@ return new class extends Migration
             $table->timestamps();
 
             $table->string('name');
+            $table->foreignId('area_id')->constrained('areas_ta');
+
         });
     }
 

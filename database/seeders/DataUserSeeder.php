@@ -98,7 +98,7 @@ class DataUserSeeder extends Seeder
         ];
 
         foreach ($processes as $process) {
-            Process::create($fund);
+            Process::create($process);
         }
         //
     }

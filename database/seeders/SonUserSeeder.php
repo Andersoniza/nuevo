@@ -64,10 +64,10 @@ class SonUserSeeder extends Seeder
             'process_id' => 2],
 
             ['name' => 'Mejoramiento genético de cultivos',
-            'process_id' => 3],
+            'process_id' => 1],
 
             ['name' => 'Mejoramieto genético de cultivos',
-            'process_id' =>4],
+            'process_id' =>1],
 
         ];
 
@@ -86,7 +86,7 @@ class SonUserSeeder extends Seeder
             'unit_id' => 3],
 
             ['name' => 'Mejoramieto genético de cultivos',
-            'unit_id' =>4],
+            'unit_id' =>1],
 
         ];
 
@@ -140,10 +140,10 @@ class SonUserSeeder extends Seeder
             'regimen_id' => 2],
 
             ['name' => 'Mejoramiento genético de cultivos',
-            'regimen_id' => 3],
+            'regimen_id' => 1],
 
             ['name' => 'Mejoramieto genético de cultivos',
-            'regimen_id' =>4],
+            'regimen_id' =>1],
 
         ];
 
