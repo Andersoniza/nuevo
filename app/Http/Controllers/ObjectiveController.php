@@ -22,14 +22,8 @@ class ObjectiveController extends Controller
      */
     public function index()
     {
-        $objectives = ObjectivePei::get();
-        return (new ObjectiveCollection($objectives))->additional([
-            'msg'=>[
-                'summary' => 'success',
-                'detail' => '',
-                'code' => '200'
-            ]
-        ])->response()->setStatusCode(200);
+        $objectivesPeis = ObjectivePei::all();
+        return response()->json($objectivesPeis);
     }
 
     /**
@@ -59,24 +53,45 @@ class ObjectiveController extends Controller
     /**
      * Display the specified resource.
      */
-    public function show(ObjectivePei $objective)
+    public function show($id)
     {
-        $objective = ObjectivePei::find($objective);
-        return $objective;
+        $objective = ObjectivePei::findOrFail($id);
+        return response()->json($objective);
     }
     /**
      * Update the specified resource in storage.
      */
-    public function update(Request $request, string $id)
-    {
-        //
-    }
+
+     public function update(Request $request, $id)
+     {
+         // Validación de datos
+         $request->validate([
+             'title' => 'required',
+             'indicatorPei' => 'required',
+             'typePei' => 'required',
+             'department' => 'required',
+             'category' => 'required',
+             'area' => 'required',
+             'user' => 'required'
+         ]);
+ 
+         // Actualizar el post
+         $objective = ObjectivePei::findOrFail($id);
+         $objective->update($request->all());
+ 
+         return response()->json($objective, 200);
+     }
+     
+    
 
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(string $id)
+    public function destroy($id)
     {
-        //
+        $objective = ObjectivePei::findOrFail($id);
+        $objective->delete();
+
+        return response()->json(null, 204);
     }
 }

@@ -1,6 +1,5 @@
 <?php
 
-use \App\Http\Controllers\CategoryController;
 use \App\Http\Controllers\ObjectiveController;
 
 use Illuminate\Http\Request;
@@ -17,6 +16,5 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::apiResource('cat', CategoryController::class);
 Route::apiResource('obj', ObjectiveController::class);
 
