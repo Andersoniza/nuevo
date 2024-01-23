@@ -5,17 +5,17 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class Management extends Model
+class FourthLevel extends Model
 {
     use HasFactory;
 
-    protected $table = 'managements';
+    protected $table = 'fourthLevels';
     protected $fillable = [
         'name'
     ];
 
-    public function management(){
-        return $this->belongsTo(User::class);
+    public function fourth_levels()
+    {
+        return $this->hasMany(User::class);
     }
-
 }

@@ -2,16 +2,15 @@
 
 namespace App\Models;
 
-// use Illuminate\Contracts\Auth\MustVerifyEmail;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
-use Illuminate\Foundation\Auth\User as Authenticatable;
+use Illuminate\Database\Eloquent\Model;
 use Illuminate\Notifications\Notifiable;
-use Laravel\Sanctum\HasApiTokens;
 
-class User extends Authenticatable
+class User extends Model
 {
-    use HasApiTokens, HasFactory, Notifiable;
+    use HasFactory, Notifiable;
 
+    protected $table = 'users';
     protected $fillable = [
         'dni',
         'name',
@@ -24,21 +23,11 @@ class User extends Authenticatable
         'institutionalPhone',
         'esigefActivity',
         'salary',
-       'password',
+        'password',
         'returnedMigrant',
         'gender',
         'transportation'
     ];
-   
-   /* protected $hidden = [
-        'password',
-        'remember_token',
-    ];
-
-    protected $casts = [
-        'email_verified_at' => 'datetime',
-        'password' => 'hashed',
-    ];*/
 
     public function activityProject(){
         return $this->hasMany(ActivityProject::class);
@@ -58,27 +47,27 @@ class User extends Authenticatable
     public function activityPei(){
         return $this->hasMany(ActivityPei::class);
     }
-    public function nationalityUser(){
+    public function nationality(){
         return $this->belongsTo(Nationality::class);
     }
 
-    public function ethnicUser(){
+    public function ethnic(){
         return $this->belongsTo(Ethnic::class);
     }
 
-    public function academicUser(){
+    public function academic_formation(){
         return $this->belongsTo(AcademicFormation::class);
     }
 
-    public function positionUser(){
+    public function position(){
         return $this->belongsTo(Position::class);
     }
 
-    public function fundUser(){
+    public function fund(){
         return $this->belongsTo(Fund::class);
     }
 
-    public function regimenUser(){
+    public function regimen(){
         return $this->belongsTo(Regimen::class);
     }
 
@@ -86,9 +75,38 @@ class User extends Authenticatable
         return $this->belongsTo(Process::class);
     }
 
-     public function associatedUser(){
+     public function associated_location(){
         return $this->belongsTo(AssociatedLocation::class);
     }
-    
-    
+
+    public function priority()
+    {
+        return $this->belongsTo(PriorityGroup::class);
+    }
+
+    public function fourth_levels()
+    {
+        return $this->belongsTo(FourthLevel::class);
+    }
+
+    public function unit()
+    {
+        return $this->belongsTo(Unit::class);
+    }
+
+    public function area()
+    {
+        return $this->belongsTo(Area::class);
+    }
+
+    public function area_ta()
+    {
+        return $this->belongsTo(AreaTa::class);
+    }
+
+    public function management()
+    {
+        return $this->belongsTo(Management::class);
+    }
+
 }

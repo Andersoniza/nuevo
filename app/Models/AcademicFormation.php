@@ -14,7 +14,7 @@ class AcademicFormation extends Model
         'name'
     ];
 
-    public function academicUser(){
+    public function academic_formation(){
         return $this->hasMany(User::class);
     }
 }

@@ -18,4 +18,9 @@ class Area extends Model
     {
         return $this->belongsTo(Investigacion::class);
     }
+
+    public function area()
+    {
+        return $this->hasMany(User::class);
+    }
 }

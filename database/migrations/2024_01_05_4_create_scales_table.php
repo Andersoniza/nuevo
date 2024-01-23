@@ -11,10 +11,9 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('priorityGroups', function (Blueprint $table) {
+        Schema::create('scales', function (Blueprint $table) {
             $table->id();
             $table->timestamps();
-            $table->bigInteger('dni')->unique();
             $table->string('name');
         });
     }
@@ -24,6 +23,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('priorityGroups');
+        Schema::dropIfExists('scales');
     }
 };

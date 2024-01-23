@@ -5,17 +5,17 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class Management extends Model
+class PriorityGroup extends Model
 {
     use HasFactory;
 
-    protected $table = 'managements';
+    protected $table = 'priorityGroups';
     protected $fillable = [
         'name'
     ];
 
-    public function management(){
-        return $this->belongsTo(User::class);
+    public function priority()
+    {
+        return $this->hasMany(User::class);
     }
-
 }

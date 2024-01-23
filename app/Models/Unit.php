@@ -14,11 +14,9 @@ class Unit extends Model
         'name'
     ];
 
-    public function process(){
-        return $this->belongsTo(Process::class);
-    }
 
-    public function unit(){
-        return $this->hasMany(Management::class);
+    public function unit()
+    {
+        return $this->hasMany(User::class);
     }
 }

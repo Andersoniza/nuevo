@@ -4,6 +4,7 @@ use \App\Http\Controllers\ObjectiveController;
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\UserController;
 
 /*
 |--------------------------------------------------------------------------
@@ -17,4 +18,5 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::apiResource('obj', ObjectiveController::class);
+Route::apiResource('users', UserController::class);
 

@@ -14,11 +14,8 @@ class AreaTa extends Model
         'name'
     ];
 
-    public function management(){
-        return $this->belongsTo(Management::class);
-    }
-
-    public function areata(){
-        return $this->hasMany(SubArea::class);
+    public function area_ta()
+    {
+        return $this->hasMany(User::class);
     }
 }

@@ -5,17 +5,12 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class Management extends Model
+class Scale extends Model
 {
     use HasFactory;
 
-    protected $table = 'managements';
+    protected $table = 'scales';
     protected $fillable = [
         'name'
     ];
-
-    public function management(){
-        return $this->belongsTo(User::class);
-    }
-
 }

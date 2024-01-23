@@ -14,8 +14,9 @@ class Process extends Model
         'name'
     ];
 
-    public function process(){
-        return $this->hasMany(Unit::class);
+    public function processUser(){
+        return $this->hasMany(User::class);
     }
+
 
 }

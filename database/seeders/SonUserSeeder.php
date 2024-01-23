@@ -37,24 +37,6 @@ class SonUserSeeder extends Seeder
             InvestmentProject::create($investmentProject);
         }
 
-        $positions = [
-            ['name' => 'Mejoramiento genético de cultivos',
-            'positionType_id' => 1],
-
-            ['name' => 'Mejoramiento genético de cultivos',
-            'positionType_id' => 2],
-
-            ['name' => 'Mejoramiento genético de cultivos',
-            'positionType_id' => 3],
-
-            ['name' => 'Mejoramieto genético de cultivos',
-            'positionType_id' =>4],
-
-        ];
-
-        foreach ($positions as $position) {
-            Position::create($position);
-        }
 
         $units = [
             ['name' => 'Mejoramiento genético de cultivos',
@@ -74,7 +56,7 @@ class SonUserSeeder extends Seeder
         foreach ($units as $unit) {
             Unit::create($unit);
         }
-        
+
         $managements = [
             ['name' => 'Mejoramiento genético de cultivos',
             'unit_id' => 1],
@@ -190,6 +172,6 @@ class SonUserSeeder extends Seeder
             AssociatedLocation::create($associatedLocation);
         }
 
-        
+
     }
 }
