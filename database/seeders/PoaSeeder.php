@@ -43,10 +43,10 @@ class PoaSeeder extends Seeder
         
 
         $extrasPoas = [
-            ['name' => 'Mejoramiento genético de cultivos','typePoa_id' => 1],
-            ['name' => 'Mejoramiento genético de cultivos','typePoa_id' => 2],
-            ['name' => 'Mejoramiento genético de cultivos','typePoa_id' => 2],
-            ['name' => 'Mejoramiento genético de cultivos','typePoa_id' => 1]
+            ['name' => 'Mejoramiento genético de cultivos','type_poa_id' => 1],
+            ['name' => 'Mejoramiento genético de cultivos','type_poa_id' => 2],
+            ['name' => 'Mejoramiento genético de cultivos','type_poa_id' => 2],
+            ['name' => 'Mejoramiento genético de cultivos','type_poa_id' => 1]
         ];
 
         foreach ($extrasPoas as $extraPoa) {
@@ -55,10 +55,10 @@ class PoaSeeder extends Seeder
         }
         
         $subExtrasPoas = [
-            ['name' => 'Mejoramiento genético de cultivos','extraPoa_id' => 1],
-            ['name' => 'Mejoramiento genético de cultivos','extraPoa_id' => 2],
-            ['name' => 'Mejoramiento genético de cultivos','extraPoa_id' => 2],
-            ['name' => 'Mejoramiento genético de cultivos','extraPoa_id' => 1]
+            ['name' => 'Mejoramiento genético de cultivos','extra_poa_id' => 1],
+            ['name' => 'Mejoramiento genético de cultivos','extra_poa_id' => 2],
+            ['name' => 'Mejoramiento genético de cultivos','extra_poa_id' => 2],
+            ['name' => 'Mejoramiento genético de cultivos','extra_poa_id' => 1]
         ];
 
         foreach ($subExtrasPoas as $subExtraPoa) {
@@ -66,10 +66,10 @@ class PoaSeeder extends Seeder
 
         }
         $states = [
-            ['name' => 'Mejoramiento genético de cultivos','typePoa_id' => 1],
-            ['name' => 'Mejoramiento genético de cultivos','typePoa_id' => 2],
-            ['name' => 'Mejoramiento genético de cultivos','typePoa_id' => 2],
-            ['name' => 'Mejoramiento genético de cultivos','typePoa_id' => 1]
+            ['name' => 'Mejoramiento genético de cultivos','type_poa_id' => 1],
+            ['name' => 'Mejoramiento genético de cultivos','type_poa_id' => 2],
+            ['name' => 'Mejoramiento genético de cultivos','type_poa_id' => 2],
+            ['name' => 'Mejoramiento genético de cultivos','type_poa_id' => 1]
         ];
 
         foreach ($states as $state) {
@@ -82,10 +82,10 @@ class PoaSeeder extends Seeder
             
             'startDate'=> '17/12/2021',
             'finalDate'=> '17/11/2024',
-            'indicatorPoa_id' => 1,
-            'activityPei_id' => 2,
+            'indicator_poa_id' => 1,
+            'activity_pei_id' => 2,
             'user_id' => 1,
-            'experimentalStation_id' => 1
+            'experimental_station_id' => 1
         ],
 
         ];
@@ -99,10 +99,10 @@ class PoaSeeder extends Seeder
 
 
         $subActivitysPoas = [
-            ['title' => 'Mejoramiento genético de cultivos','generalActivity_id' => 1,'user_id' => 1,'typePoa_id' => 1],
-            ['title' => 'Mejoramiento genético de cultivos','generalActivity_id' => 1,'user_id' => 1,'typePoa_id' => 1],
-            ['title' => 'Mejoramiento genético de cultivos','generalActivity_id' => 1,'user_id' => 1,'typePoa_id' => 1],
-            ['title' => 'Mejoramiento genético de cultivos','generalActivity_id' => 1,'user_id' => 1,'typePoa_id' => 1]
+            ['title' => 'Mejoramiento genético de cultivos','general_activitys_poa_id' => 1,'user_id' => 1,'type_poa_id' => 1],
+            ['title' => 'Mejoramiento genético de cultivos','general_activitys_poa_id' => 1,'user_id' => 1,'type_poa_id' => 1],
+            ['title' => 'Mejoramiento genético de cultivos','general_activitys_poa_id' => 1,'user_id' => 1,'type_poa_id' => 1],
+            ['title' => 'Mejoramiento genético de cultivos','general_activitys_poa_id' => 1,'user_id' => 1,'type_poa_id' => 1]
         ];
 
         foreach ($subActivitysPoas as $subActivityPoa) {

@@ -18,13 +18,13 @@ return new class extends Migration
             $table->string('title');
             $table->date('startDate');
             $table->date('finalDate');
-            $table->foreignId('indicatorPoa_id')
+            $table->foreignId('indicator_poa_id')
             ->constrained('indicatorsPoas');
-            $table->foreignId('activityPei_id')
+            $table->foreignId('activity_pei_id')
             ->constrained('activitysPeis');
             $table->foreignId('user_id')
             ->constrained('users');
-            $table->foreignId('experimentalStation_id')
+            $table->foreignId('experimental_station_id')
             ->constrained('experimental_stations');
         });
     }

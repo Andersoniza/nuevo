@@ -16,7 +16,7 @@ return new class extends Migration
             $table->timestamps();
             $table->softDeletes();
             $table->string('name');
-            $table->foreignId('extraPoa_id')
+            $table->foreignId('extra_poa_id')
             ->constrained('extrasPoas');
         });
     }

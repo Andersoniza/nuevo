@@ -16,11 +16,11 @@ return new class extends Migration
             $table->timestamps();
             $table->softDeletes();
             $table->string('title');
-            $table->foreignId('generalActivity_id')
+            $table->foreignId('general_activitys_poa_id')
             ->constrained('generalActivitysPoas');
             $table->foreignId('user_id')
             ->constrained('users');
-            $table->foreignId('typePoa_id')
+            $table->foreignId('type_poa_id')
             ->constrained('typesPoas');
         });
     }
